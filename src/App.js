@@ -1,23 +1,34 @@
-import logo from './logo.svg';
+import React, {useState} from 'react'
 import './App.css';
+import { BsFillPeopleFill, BsFillPersonPlusFill} from "react-icons/bs"
+
+// Componentes
+import LinkCard from './components/LinkCard/LinkCard';
+import PacienteForm from './components/PacienteForm/PacienteForm'
+import Popup from './components/Popup/Popup';
 
 function App() {
+  const [showCreatePop, setShowCreatePop ] = useState(false)
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>FitBox App</h1>
+
+      <Popup trigger={showCreatePop} handleTrigger={setShowCreatePop} title="Novo paciente">
+        <PacienteForm />
+      </Popup> 
+
+      <div className="cards">
+        <LinkCard 
+          mainText={'Lista de pacientes'}
+          Icon={BsFillPeopleFill}
+          onClick={''}
+        />
+        <LinkCard 
+          mainText={'Novo paciente'}
+          Icon={BsFillPersonPlusFill}
+          handleClick={setShowCreatePop}
+        />
+      </div>
     </div>
   );
 }
