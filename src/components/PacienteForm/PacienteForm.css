@@ -1,13 +1,16 @@
 .pacienteform{
     border: 0.1rem solid green;
+    padding: 0.75rem 0.25rem;
 
     display: grid;
-    grid-template-columns: 50px auto;
+    grid-template-columns: 35% 50%;
     justify-content: center;
-    column-gap: 50px;
-    row-gap: 5px;
+    justify-items: start;
+    column-gap: 10px;
+    row-gap: 10px;
 }
 
 .form-btn{
-    grid-column: span 2
+    grid-column: span 2;
+    place-self: center stretch;
 }

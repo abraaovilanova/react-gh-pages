@@ -14,7 +14,7 @@ function App() {
       <h1>FitBox App</h1>
 
       <Popup trigger={showCreatePop} handleTrigger={setShowCreatePop} title="Novo paciente">
-        <PacienteForm />
+        <PacienteForm handleTrigger={setShowCreatePop} />
       </Popup> 
 
       <div className="cards">
