@@ -1,0 +1,14 @@
+.navbar{
+    border: 0.5rem solid blue;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar ul li {
+    margin-left: 0.25rem;
+}

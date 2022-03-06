@@ -4,6 +4,7 @@ import './PacienteForm.css'
 export default ({ handleTrigger }) => {
     const [user, setUser] = useState({
         nome:'',
+        idade:'',
         email:'',
         genero:'',
         altura:'',
@@ -19,7 +20,7 @@ export default ({ handleTrigger }) => {
                 type="text"
                 value={user.nome} 
                 onChange={(e)=>{
-                    setUser({...user, name: e.target.value })
+                    setUser({...user, nome: e.target.value })
                 }}
             />
 
@@ -30,6 +31,15 @@ export default ({ handleTrigger }) => {
                 value={user.email}
                 onChange={(e)=>{
                     setUser({...user, email: e.target.value })
+                }} 
+            />
+            <label htmlFor='idade'>Idade:</label>
+            <input 
+                id="idade" 
+                type="text"
+                value={user.idade}
+                onChange={(e)=>{
+                    setUser({...user, idade: e.target.value })
                 }} 
             />
 

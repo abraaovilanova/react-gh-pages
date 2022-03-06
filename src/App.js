@@ -1,34 +1,28 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
+import { Routes, Route, Link } from "react-router-dom"
 import './App.css';
-import { BsFillPeopleFill, BsFillPersonPlusFill} from "react-icons/bs"
+
+
 
 // Componentes
-import LinkCard from './components/LinkCard/LinkCard';
-import PacienteForm from './components/PacienteForm/PacienteForm'
-import Popup from './components/Popup/Popup';
+import NavBar from './components/Navbar/NavBar';
+
+// Pages
+import Home from './pages/Home/Home'
+import Pacientes from './pages/Pacientes/Pacientes'
+import Paciente from './pages/Paciente/Paciente'
 
 function App() {
   const [showCreatePop, setShowCreatePop ] = useState(false)
   return (
     <div className="App">
-      <h1>FitBox App</h1>
+      <NavBar />
 
-      <Popup trigger={showCreatePop} handleTrigger={setShowCreatePop} title="Novo paciente">
-        <PacienteForm handleTrigger={setShowCreatePop} />
-      </Popup> 
-
-      <div className="cards">
-        <LinkCard 
-          mainText={'Lista de pacientes'}
-          Icon={BsFillPeopleFill}
-          onClick={''}
-        />
-        <LinkCard 
-          mainText={'Novo paciente'}
-          Icon={BsFillPersonPlusFill}
-          handleClick={setShowCreatePop}
-        />
-      </div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="pacientes" element={<Pacientes />} />
+        <Route path="paciente" element={<Paciente />} />
+      </Routes>
     </div>
   );
 }

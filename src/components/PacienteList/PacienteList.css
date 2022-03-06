@@ -1,0 +1,4 @@
+.pacienteslist-list__item{
+    list-style: none;
+    border: 0.25rem solid red;
+}
