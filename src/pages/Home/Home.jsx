@@ -23,7 +23,7 @@ export default () => {
             </Popup> 
 
             <div className="cards">
-                <Link to="/pacientes">
+                <Link to="/react-gh-pages/pacientes">
                     <LinkCard 
                         mainText={'Meus pacientes'}
                         Icon={BsFillPeopleFill}
@@ -35,11 +35,13 @@ export default () => {
                 Icon={BsFillPersonPlusFill}
                 handleClick={setShowCreatePop}
                 />
-                <LinkCard 
-                mainText={'Estatistica'}
-                Icon={BsFillBarChartFill}
-                handleClick={''}
-                />
+                <Link to="/react-gh-pages/estatistica">
+                    <LinkCard 
+                    mainText={'Estatistica'}
+                    Icon={BsFillBarChartFill}
+                    handleClick={''}
+                    />
+                </Link>
             </div>
         </div>
     )

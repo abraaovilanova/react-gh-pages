@@ -1,5 +1,15 @@
+import { useLocation, useParams } from "react-router-dom"
+
 export default () => {
+    const params = useParams();
+    console.log(params)
     return (
-        <h1>Nome do paciente * Idade * Altura * Peso * IMC</h1>
+        <div>
+            <h1>{params.userId} * Idade * Altura * Peso * IMC</h1>
+            <ul>
+                <li>Nova Avaliação</li>
+                <li>Histórico</li>
+            </ul>
+        </div>
     )
 }

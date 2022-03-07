@@ -15,8 +15,11 @@ export default ({ listTitle }) => {
         return(
             dataList.map(elem=>{
                 return(
-                    <Link  to="/paciente">
-                        <li className="pacienteslist-list__item">{elem.nome}</li>
+                    <Link  to={`${elem.nome}`}>
+                        <li className="pacienteslist-list__item">
+                            <div className="paciente__icon">{elem.nome[0]}</div>
+                            <span>{elem.nome}</span>
+                        </li>
                     </Link>
                 )
             })

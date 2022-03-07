@@ -1,4 +1,16 @@
 .pacienteslist-list__item{
     list-style: none;
     border: 0.25rem solid red;
+
+    display: flex;
+    align-items: center;
+
+}
+
+.paciente__icon{
+    border-radius: 100%;
+    margin-right: 0.25rem;
+    height: 1.25rem;
+    width: 1.25rem;
+    border: 0.25rem solid red;
 }

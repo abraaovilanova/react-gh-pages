@@ -56,7 +56,7 @@ export default ({ handleTrigger }) => {
                 <option value="feminino">Feminino</option>
             </select>
 
-            <label htmlFor='altura'>Altura(cm):</label>
+            {/* <label htmlFor='altura'>Altura(cm):</label>
             <input
                 id='altura' 
                 type="number"
@@ -64,16 +64,16 @@ export default ({ handleTrigger }) => {
                 onChange={(e)=>{
                     setUser({...user, altura: e.target.value })
                 }}
-            />
+            /> */}
 
-            <label htmlFor='peso'>Peso(kg):</label>
+            {/* <label htmlFor='peso'>Peso(kg):</label>
             <input 
                 type="number" 
                 value={user.peso}
                 onChange={(e)=>{
                     setUser({...user, peso: e.target.value })
                 }}
-            />
+            /> */}
 
             <label htmlFor='observacao'>Observação:</label>
             <input 

@@ -8,13 +8,13 @@ import './Navbar.css'
 
 export default () => {
     return (
-        <div className="navbar">
-            <h1><FaBoxOpen /> FitBox</h1>
-            <ul>
-                <li><Link to="/">Home</Link></li>
-                <li><Link to="/pacientes">Pacientes</Link></li>
-                <li><Link to="/estatistica">Estatistica</Link></li>
+        <nav className="navbar">
+            <FaBoxOpen /> FitBox
+            <ul className="navbar-itens">
+                <li><Link to="react-gh-pages/">Home</Link></li>
+                <li><Link to="react-gh-pages/pacientes">Pacientes</Link></li>
+                <li><Link to="react-gh-pages/estatistica">Estatistica</Link></li>
             </ul>
-        </div>
+        </nav>
     )
 }

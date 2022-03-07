@@ -1,5 +1,7 @@
 .navbar{
     border: 0.5rem solid blue;
+    display: flex;
+    align-items: center;
 }
 
 .navbar ul {
@@ -11,4 +13,12 @@
 
 .navbar ul li {
     margin-left: 0.25rem;
+}
+
+.navbar-itens li a{
+    text-decoration: none;
+}
+
+.navbar-itens li a:hover{
+    border-bottom: 0.1rem solid black;
 }
